@@ -1,0 +1,141 @@
+<!--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+   <!--  <link rel="stylesheet" href="/NotasNew/public/css/login.css">-->
+   <link rel="stylesheet" href="/css/login.css"> 
+    
+  
+  <title>LOGIN</title>
+
+
+
+<title>Login para varios usuario</title>
+</head>
+
+<body>
+  <div class="tituloLogin">
+    <img src="/image/blocknotas3.jpg" alt="logo" />
+<h1>MI BLOCK DE NOTAS
+</h1> 
+<ul>
+  <li><a href="registro.html"><h3>Registrese para ingresar a Block de Notas</h3></a></li>
+    
+</ul>
+
+</div>
+<div class="formulario">
+<form name="login"> 
+     <table width="200" border="0"> 
+       <tr> 
+            <th scope="row"><h2>Usuario</h2></th> 
+
+         <div class="ingresoDatos">
+            <td>
+                <span class="cnt"> 
+    
+                    <input name="usuario" type="text" class="Input" value="" size="20" autofocus /> 
+                </span>
+            </td> 
+          </div>
+
+       </tr> 
+       
+       <tr> 
+         <th height="33" scope="row"><h2>Password</h2></th> 
+         
+            <div class="ingresoDatos">
+              <td>
+                <span class="cnt"> 
+                 <!-- original de web
+                  <label name="password">Contraseña:</label> 
+                  <input type="password" id="password" name="password" >
+                -->
+                <label name="password"></label> 
+                <input type="password" id="password" name="password" class="Input" value="" size="20"/>
+                
+                <!-- original del proyecto pero marcado rojo
+                <input name="password" type="password" class="Input" value="" size="20" /> 
+                -->
+                </span>
+              </td> 
+            </div>
+
+
+              <td>
+                <span class="cnt"> 
+                  <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/> 
+                </span>
+              </td> 
+        
+        </tr> 
+
+        <div class="otrosbotones">
+            <tr> 
+                <th scope="row"><input type="reset" name="Borrar" id="Borrar" value="Reset" class="boton" /></th> 
+            </tr> 
+          <!-- Agrego botn para registro -->
+            <!--
+            <tr> 
+                <th scope="row"><input type="button" name="Registro" id="Registro" value="registro" class="boton" /></th>
+                            
+              </tr> 
+          </div>
+        </div>
+        -->
+       
+          <!-- fin de boton de registro -->
+
+     </table> 
+</form> 
+</div>
+<script language="JavaScript"> 
+    function Login(){ 
+      var done=0; 
+      var usuario=document.login.usuario.value; 
+      var password=document.login.password.value; 
+      // var registro=document.Registro.value
+      if (usuario=="Ariel" && password=="1234") {
+        
+          window.location.href = "index4.html"; 
+        } 
+      if (usuario=="Maria" && password=="5678") { 
+          window.location="index4.html"; 
+        } 
+      if (usuario=="" && password=="") { 
+        window.location="index2.html"; 
+        } 
+        /*
+        if (registro=="registro") { 
+        window.location="registro.html"; 
+        } */
+    } </script> 
+
+  <script language="Javascript"> 
+
+document.oncontextmenu = function(){return false} 
+ 
+</script>
+<footer>
+  <div class="piefooter">
+  <ul>
+    <li><a href="registro.html"><h2>Registrese para ingresar a Block de Notas</h2></a></li>
+      
+  </ul>
+</div>
+</footer>
+</body>
+
+</html>

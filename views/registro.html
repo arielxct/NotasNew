@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Document</title>
+  </head>
+  
+    <header>
+      <div class="logo">
+        <!--
+        <img src="/image/blocknotas3.jpg" alt="logo" />
+        -->
+
+          <!-- agrego y modifico la cabecera  -->
+          <div class="tituloLogin">
+        
+            <h1>MI BLOCK DE NOTAS
+            <h3> PAGINA DE REGISTRO</h3>
+            </h1> 
+        
+          </div>
+          <!-- fi de agrego y modifico la cabecera  -->
+        
+      </div>
+      
+    </header>
+    <!-- Agrego estilo del Flormulario-->
+<style>
+  .tituloLogin{
+    width: 96%;
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+	border: 1px solid white;
+	border-radius: 10px;
+	background: #d82d2d;
+	margin: 20px;
+}
+body {
+  background-color:black;
+  max-width: 1200px;
+  color: #d91a2a;
+}
+  li{
+    color:rgb(232, 236, 239)
+    
+  }
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #d91a2a;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: rgb(0, 1, 1);
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: rgb(14, 15, 14);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #137718;
+}
+
+div {
+  border-radius: 5px;
+  color: #e3eae3;
+  background-color: #080909;
+  padding: 20px;
+}
+
+/************************
+
+Footer
+
+************************/
+
+footer{
+  background-color: #0e0d0d;
+  /* color: var(--second-c); */
+}
+footer ul{
+  padding:0;
+  /* agrego direccion*/
+  color: #dee2e9;
+}
+footer li{
+  list-style: none;
+  /* Direccion y telefonos*/
+  color: #f1f1ed;
+}
+.wrap-footer{
+  display: grid;
+  grid-template-columns: 30% 15% 15% 20%;
+  column-gap: 5%;
+  padding: 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  /*web de autospot y titulos */
+  color: aqua;
+}
+.logo-element_footer{
+  display: flex;
+  margin: 2rem 0;
+}
+.logo-element_footer img{
+  max-height: 80px;
+  width: 80px;
+  
+}
+.element-footer h5{
+  margin: 1rem 0;
+}
+.text-element-footer li{
+  line-height: 2;
+}
+.link-elements-footer li a{
+  color:#f0efeb;
+}
+</style>
+<!-- Fin de  estilo del Flormulario-->
+
+    
+    <body>
+    <!-- Formulario con su estilo embuido -->
+    <h3>-- Para registrarse ingrese sus datos. Recibira un email con su password -- </h3>
+
+<div>
+  <form action="/index.html">
+    
+    <label for="fname">Nombre</label>
+    <input type="text" id="fname" name="firstname" placeholder="Su nombre..">
+
+    <label for="lname">Apellido</label>
+    <input type="text" id="lname" name="lastname" placeholder="Su apellido.."><br><br>
+    
+    <label for="birthday">Fecha de nacimiento:</label>
+    <input type="date" id="birthday" name="birthday"><br><br>
+    
+
+    <label for="tuemail">Su email --------------</label>
+    <input type="email" id="tuemail" name="tuemail" placeholder="Su email.."><br><br>
+
+    <label for="motivo">Seleccione un interes principal para usar Block de Nota.</label>
+    <select id="motivo" name="motivo">
+      <option value="personal">Uso personal</option>
+      <option value="familiar">Uso familiar</option>
+      <option value="comercial">Uso comercial</option>
+      <option value="empresarial">Uso empresarial</option>
+      <option value="eduacion">Para educación</option>
+    </select>
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<!-- Fin del Formulario con su estilo embuido -->
+  </body>
+  
+  <footer class="footer">
+   
+
+    <div class="wrap-footer">
+      <div class="text-element-footer element-footer">
+        <div>
+          <img src="/image/Imagen de telefono.jpg" alt="logo" />
+        </div> 
+      
+      </div>
+      
+      
+      <div class="text-element-footer link-elements-footer element-footer">
+    <h5>Más Información</h5>
+    <ul>
+    <li><a href="/index.html">Inicio</a></li>
+       
+    <li><a href="/consultas.html">Consultas</a></li>
+    <li><a href="/contacto">Contactar</a></li>
+    </ul>
+    </div>
+    
+    
+  </footer>
+</html>

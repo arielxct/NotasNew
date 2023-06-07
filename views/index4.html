@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>Bloc de notas</title>
+	<!--
+		<link rel="stylesheet" href="/NotasNew/public/css/estilos_index4.css">
+	-->	
+		<link rel="stylesheet" href="/css/estilos_index4.css"> 
+	
+		<script src="jquery.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Aplicacion Tarea</h1>
+		</div>
+		<!-- LO ANULO / AGREGO CATEGORIA-->
+		<div class="agregar_tarea">
+			<h2>Agregar Categoria:</h2>
+			<!-- anulo inpur inicial de Categoria
+			<input type="text" placeholder="Ingrese una categoria" id="texto_categoria">
+			<button id="categoria">>></button>
+			-->
+		<!-- FIN DE ANULOS / AGREGO CATEGORIA-->	
+
+
+
+<!-- Formulario con su estilo embuido -->
+    
+
+<div>
+  <form action="/index.html">
+       
+    <label for="categoria">Seleccione una categoria dentro de la lista desplegable.</label>
+    <select id="texto_categoria" name="categoria">
+      <option value="Hogar">Hogar</option>
+      <option value="Trabajo">Trabajo</option>
+      <option value="Salud">Salud</option>
+      <option value="Educacion">Educación</option>
+      <option value="Familiar">Familiar</option>
+	  <option value="Personal">Personal</option>
+      <option value="Varios">Varios</option>
+
+    </select>
+   <!-- anulo submit
+    <input type="submit" value="Submit">
+	-->
+  </form>
+</div>
+<!-- Fin del Formulario con su estilo embuido -->
+
+
+
+<!-- Agrego lista desplegable de CAtegorias -->
+		
+		<!-- AGREGO CATEGORIA-->
+
+		<div class="agregar_tarea">
+			<h2>Agregar Tarea:</h2>
+			<input type="text" placeholder="Ingrese su tarea" id="texto_tarea"> <!-- <input type="text" placeholder="Ingrese su tarea" id="texto">-->
+			<button id="tarea">>></button>
+		</div>
+
+		<div class="tareas1">
+			<h2>Tareas:</h2>
+			<div class="tareas">
+				
+			</div>
+		</div>
+
+		<div class="botones">
+			<button id="uno1" class="uno1">Importar JSON</button>
+			<button id="uno1" class="uno2">Exportar JSON</button>
+			<button id="dos">Guardar notas</button>
+			<button id="tres">Eliminar tareas</button>
+		</div>
+
+<!-- AGREGO NUEVOS BOTONES-->
+<div class="botones">
+	<button id="" class="uno1">Buscar Notas</button>
+	<button id="" class="uno2">Editar Categorias</button>
+	<button id="">Exportar notas</button>
+	<button id="">Hacer Backup</button>
+
+<!-- agrego el FOOTER 000000000000000000000000000-->
+<div class="header">
+	<h1>Mas opciones de Block de Notas</h1>
+</div>
+<footer class="footer">
+    <div class="wrap-footer">
+      <div class="text-element-footer element-footer">
+        <!--
+        -->
+        <div class="logo-element_footer">
+          <img src="/image/blocknotas3.jpg" alt="logo" />
+        </div>
+        
+        <!--
+          <p>FOOTER  AUTOSPOT </p>  
+        -->
+      </div>
+      <div class="text-element-footer element-footer">
+        <h5>CONTACTO</h5>
+        <ul>
+
+          <li>Av. Santa FE 4000</li>
+         
+          <li>Tel: (+54) 0800 123 456</li>
+        </ul>
+      </div>
+      <div class="text-element-footer link-elements-footer element-footer">
+        <h5>Más Información</h5>
+        <ul>
+          <li><a href="./index4.html">Inicio</a></li>
+          <li><a href="./preguntas.html">Preguntas</a></li>
+          <li><a href="./consultas.html">Consultas</a></li>
+         
+		  <li><a href="editar_perfil.html">Perfil</a></li>
+        
+		</ul>
+      </div>
+      <div class="rrss-element-footer element-footer">
+        <h5>Redes Sociales</h5>
+        <ul>
+          <li>
+            <a href="https://facebook.com" target="_blank" rel="nofollow noopener noreferer"><img
+                src="./image/facebook.JPG" alt="icono redes sociales"></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="nofollow noopener noreferer"><img
+                src="./image/instagram.JPG" alt="icono redes sociales"></a>
+          </li>
+          <li>
+            <a href="https://www.google.com.ar/chrome/" target="_blank" rel="nofollow noopener noreferer"><img
+                src="./image/google.JPG" alt="icono redes sociales"></a>
+          </li>
+          <li>
+            <a href="https://web.whatsapp.com/" target="_blank" rel="nofollow noopener noreferer"><img
+                src="./image/whastapp.JPG" alt="icono redes sociales"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </footer>
+
+
+<!-- COMIENZA LA PARTE DE SCRIPT OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->		
+<!-- FUNCION AGREGA CATEGORIA Y TAREA EN JAVASCRIPT   , agregue categoria, creo el espacio para mostrar datos-->
+		<script>
+			function agregarTarea (fecha_completa,categoria,tarea) {
+				var html_tarea = '<div class="tarea" style="display: none;">'+
+									'<div class="uno">'+
+										'<h4>'+ fecha_completa+'</h4>'+
+										'<div class="categoria_uno">'+
+										'<b>'+ "Categoria: "+'</b>' +'<a>' +categoria+'</a>'+							
+										'</div>'+
+										'<div class="tarea_uno">'+
+										'<b>'+ "Tarea: "+'</b>' +'<p>'+tarea+'</p>'+
+										'</div>'+
+									'</div>'+
+									'<div class="select">'+
+										'<button class="boton_tarea">X</button>'+
+									'</div>'+
+								'</div>';
+				$(".tareas").prepend(html_tarea);
+			}
+
+		// 	TRANSFORMA EL MENSAJE EN JSON CUANDO ES LLAMADA el id: tarea
+
+			function expJSON () {
+				var tarea2 = [];
+
+				$(".tarea").each(function(){
+					var fecha = $(this).find("h4").text();
+					var texto_categoria = $(this).find("a").text();// agregado
+					var texto_tarea = $(this).find("p").text();//var texto = $(this).find("p").text();
+					tarea2.push({"fecha":fecha,"texto_categoria":texto_categoria,"texto_tarea":texto_tarea});//tarea2.push({"fecha":fecha,"texto":texto});
+				})
+
+				return JSON.stringify(tarea2);
+			}
+
+			// ESTA FUNCION SE ACTIVA CUANDO SE INCLUYE UNA TAREA Y LLAMA A LA FUNCION AGREGATAREA
+			// 1) es la formadora de las variables fecha_completa, categoria y tarea
+			$("#tarea").click(function(){
+				var categoria = $("#texto_categoria").val(); // agregado
+				var tarea = $("#texto_tarea").val();//var tarea = $("#texto").val();
+				var fecha = new Date();
+				var fecha_completa = fecha.getDate() + '/' + (fecha.getMonth()+1) + '/' + fecha.getFullYear() + ' ' + fecha.getHours() + ':' + fecha.getMinutes();
+				
+				if (tarea != "") {
+					agregarTarea(fecha_completa,categoria,tarea); // agregeue categoria
+					$(".tarea:first").show(500);
+				} else {
+					alert("El texto no tiene que estar vacio.");
+				}
+
+				$("#texto_categoria").val(""); // pongo en cero los imputs
+				$("#texto_tarea").val("");//$("#texto").val("");
+				setEliminarBtn();
+			});
+			// ESTA FUNCION SE ACTIVA SOLA CON EL EVENTO CLICK
+			$('#texto_tarea').keyup(function(e){
+				if(e.keyCode==13){
+					$('#texto_tarea').trigger('click')
+					//console.log(e.keyCode)
+				}
+			});
+			// ESTA FUNCION ELIMINA TAREA ES LLAMADA POR EL BOTON ELIMINA TAREA, agregue categoria
+			function setEliminarBtn () {
+				$(".boton_tarea").click(function(){
+					$(this).parent(".select").parent(".categoria").hide(500, function(){
+						$(this).remove()
+					});
+					$(this).parent(".select").parent(".tarea").hide(500, function(){
+						$(this).remove()
+					});
+
+				});
+			}
+			// ESTA FUNCION SE ACTIVA SOLA ACCIONANDO EL BOTON ELIMINAR TAREA
+			$('#tres').click(function(){
+				$('.boton_tarea').trigger('click')
+			});
+
+			// ESTA FUNCIONA SE LLAMA SOLA ACTIVANDO EL BOTON GUARDAR NOTAS
+
+			$("#dos").click(function(){
+				localStorage.tareas = expJSON();	// es el mejor y mas comodo
+			});
+			// ESTA FUNCION LEE TAREAS GUARDADAS EN LOCASTORAGE Y LAS AGREGA A LA FUNCION AGREGATAREAS y las muestra por pantalla.
+			var tareas_Guardadas = JSON.parse(localStorage.tareas);
+			for (var i = 0; i < tareas_Guardadas.length; i++) {
+				agregarTarea(tareas_Guardadas[i].fecha, tareas_Guardadas[i].texto_categoria ,tareas_Guardadas[i].texto_tarea);//agregarTarea(tareas_Guardadas[i].fecha, tareas_Guardadas[i].texto);
+				$(".tarea:first").show(500);
+				setEliminarBtn();
+			}
+			// ESTA FUNCION EXPORTA A JSON CON BOTON EXPORTA JSON
+			$(".uno2").click(function(){
+				alert(expJSON());
+			});
+// ESTA FUNCION IMPORTA LAS TAREAS GUARDADAS EN LOCALSTORAGE Y LAS PRESENTA A LA FUNCION AGREGARTAREAS
+			$('.uno1').click(function(){
+				localStorage.tarea = prompt("Ingrese su tarea como JSON");
+
+				var tareas_Guardadas = JSON.parse(localStorage.tarea);
+				for (var i = 0; i < tareas_Guardadas.length; i++) {
+					agregarTarea(tareas_Guardadas[i].fecha, tareas_Guardadas[i].texto_categoria, tareas_Guardadas[i].texto_tarea);//agregarTarea(tareas_Guardadas[i].fecha, tareas_Guardadas[i].texto);
+					$(".tarea:first").show(500);
+					setEliminarBtn();
+				}
+			})
+		</script>
+	</body>
+</html>

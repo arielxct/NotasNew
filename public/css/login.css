@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: black;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	color: rgb(227, 230, 235);
+}
+
+header {
+	width: 96%;
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+	border: 1px solid white;
+	border-radius: 10px;
+	background: #d82d2d;
+	margin: 20px;
+}
+.tituloLogin{
+    width: 96%;
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+	border: 1px solid white;
+	border-radius: 10px;
+	background: #d82d2d;
+	margin: 20px;
+}
+h2 {
+	margin: 20px 0px 20px 0px;
+	text-align: center;
+	color: #d28f14;
+}
+
+
+
+.boton {
+	width: 60px;
+	height: 50px;
+	background: lightblue;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+.boton:hover{
+    background: #ff7474;
+	cursor: pointer;
+}
+.formulario{
+	background-color: black;
+border: 5px;
+padding-left: 40px;
+}
+.otrosbotones{
+	display:flex;
+	
+}
+.piefooter  {
+	background-color:black;
+	
+}

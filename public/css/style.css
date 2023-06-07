@@ -1,0 +1,373 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+/*=============================================*/
+
+header{
+  display:grid;
+  background-color: rgb(9, 9, 8);
+  grid-template-columns: 20%  60% 20%;
+  column-gap: 5%;
+  
+  margin:0;
+  max-width: 1200px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.tituloLogin{
+  width: 96%;
+padding: 20px 0px 20px 0px;
+text-align: center;
+border: 1px solid white;
+border-radius: 10px;
+background: #d82d2d;
+margin: 20px;
+
+}
+
+
+/*--------------agregado */
+
+      table, th, td {
+        border: 5px solid;
+        color: rgb(13, 14, 14);
+        background-color: aquamarine;
+      }
+      table {
+        width: 72%;
+             align-items:left;
+              }
+      body{
+    background-color:rgb(132, 170, 155);
+      }
+      
+/*--------------agrego------------*/
+/*
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  color: white;
+  width: 500px;
+  margin: 5px;
+  line-height: 20px;
+  padding: 5px;
+  font-size: 50px;
+}
+*/
+/*------------fin agrego*---------------*/
+/*
+.cabecera{
+  flex: 100%;
+  display: flex;
+
+}
+*/
+.logo{
+  padding: 5px;
+  margin: 5px;
+  /*
+  border: 3px solid rgb(11, 67, 211);
+  max-width: 1200px;
+  height: auto;
+  */
+  float:left;
+
+}
+.left{
+
+  float: left;
+
+  width: 70px;
+  height: 70px;
+}
+.logo2{
+  padding: 5px;
+  margin: 5px;
+  /*
+  border: 3px solid rgb(6, 44, 126);
+  max-width: 1200px;
+  height: auto;
+  */
+  float:left;
+}
+body{
+  background-color: rgb(2, 0, 11);
+  color: #e3dbdf;
+  text-align: center;
+  
+}
+.titulo{
+  background-color: rgb(10, 15, 156);
+    
+    display: flex;
+    grid-template-columns: 100% ;
+    column-gap: 5%;
+    padding: 5px;
+    border: 3px solid green;
+    margin: 10px;
+    margin-right:10%;
+    max-width: 100%;
+    float:inherit ;
+  
+  
+  }
+  .titulo2{
+
+    /*
+  background-color: rgb(103, 12, 12);
+    
+    display:grid;
+    grid-template-columns: 100% ;
+    column-gap: 5%;
+    padding: 5px;
+    border: 3px solid green;
+    margin: 10px;
+    margin-right:0%;
+    max-width: 1200px;
+    */
+    background-color:#68729E;
+color:#d50c0c;
+font-size:24pt;
+text-transform : uppercase;
+padding: 7px 3px 7px 8px;
+font-weight : normal;
+letter-spacing : 2px;
+margin: 0px 0px 8px 0px;
+border: 3px solid green;
+
+  
+  }
+  
+  .titulo_menu{
+    background-color: rgb(8, 8, 8);
+      
+      display: grid;
+      grid-template-columns: 100% ;
+      column-gap: 5%;
+      padding: 5px;
+      border: 3px solid green;
+      margin: 10px;
+      margin-right:0%;
+      max-width: 150px;
+    
+    }
+  
+
+
+
+.menuPrincipal{
+
+  background-color: rgb(10, 10, 10);
+  
+  display: grid;
+  grid-template-columns: 100% ;
+  column-gap: 5%;
+  padding: 5px;
+  border: 3px solid green;
+  margin: 10px;
+  margin-right:0%;
+  max-width: 150px;
+  
+  
+  
+}
+/* fin de body -------------*/
+/*======================================*/
+
+
+
+/*
+li{
+    color:rgb(243, 243, 243);
+    background-color: rgb(17, 17, 18);
+}
+*/
+
+.categoria ul{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.categoria:hover ul{
+    display: block;
+    background-color:lightgray;
+}
+
+h1{
+  height: 122px;
+}
+
+
+/* copio ul*/
+/*modifica color de fondo del  menu Vertical y redes sociales del footer*/
+ul {
+list-style-type: style type;
+margin: 0;
+padding: 1px 5px;
+
+text-align: center;
+overflow:visible;
+justify-content: center;
+
+/* background-color:#131313; */
+}
+/*------------------*/
+/* modifico li */
+li{
+/* modifica todos los li en haeder y bodyr*/
+  color:rgb(226, 136, 39);
+  float: left;
+  padding: 1px 5px 1px 5px;
+  text-align: center;
+overflow:visible;
+background-color:#0a0a0a;
+
+}
+/*------------------*/
+/* agrego li a   */
+/* modifica  menu de Redes sociales*/
+li a {
+display: block;
+
+color: rgb(245, 245, 248);
+text-align: left;
+padding: 14px 16px;
+text-decoration: none;
+}
+li a:hover {
+background-color: #153915;
+color: rgb(236, 160, 18);
+}
+/*---Agrego contenedores y listados para los links--------*/
+.contenedor {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+}
+/* ESTILOS LISTADO */
+.contenedor .div-listado {
+  width: 55%;
+  height: calc(100% - 50px);
+  margin: 15px 15px;
+  background-color: rgb(135, 132, 132);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor .div-listado h2 {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 2em;
+  color: whitesmoke;
+}
+
+
+/*---fin Agrego contenedores y listados----------*/
+/* footer */
+/************************
+
+Footer
+
+************************/
+
+footer{
+background-color: #050505; 
+/* color del fondo de footer*/
+/*color: var(--second-c); */
+float:left;
+
+}
+footer ul{
+padding: 0;
+/* agrego direccion*/
+color: #e3dbdf;
+}
+footer li{
+list-style: none;
+/* Direccion y telefonos*/
+color: #e6e6e0;
+}
+.wrap-footer{
+/* ancho y margenes del grid del las 4 columnas del footer */
+display: grid;
+grid-template-columns: 30% 15% 15% 20%;
+column-gap: 5%;
+padding: 1rem;
+margin: 2rem auto;
+max-width: 1200px;
+/*web  y titulos */
+color: aqua;
+/*agrego justify*/
+justify-content: center;
+}
+/*
+.logo-element_footer{
+display: flex;
+margin: 2rem 0;
+}
+.logo-element_footer img{
+max-height: 75px;
+}
+*/
+.element-footer h5{
+margin: 1rem 0;
+}
+
+.text-element-footer li{
+/*class titulos del footer y links a otras paginas*/
+line-height: 2;
+}
+.link-elements-footer li a{
+/* color de las letras de las columnas*/
+color:#f0efeb;
+}
+.rrss-element-footer ul{
+/* grid de la columna de links*/
+display: flex;
+flex-flow: wrap;
+}
+.rrss-element-footer img{
+width: 35px;
+}
+.rrss-element-footer li{
+margin-right: 1rem;
+/* agrego*/
+color: #dee2e9;
+}
+.footer-creds{
+/* ultima fila del footer tirulos Derechos Reservados y demas*/
+display: flex;
+justify-content: space-between;
+padding: 0 1rem;
+color: #dee2e9;
+font-size: .9rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+.legal-creds ul{
+/* div de los links a pliticas de privacidad y legal*/
+display: flex;
+flex-flow: row;
+}
+.legal-creds ul li{
+padding-right: 1rem;
+}
+.legal-creds ul a{
+color: #e4d9d7;
+font-size: .9rem;
+}
