@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 */
 
 app.get('/views', function (req, res) {
-  res.sendFile(path.join(__dirname, '/views/index.html'))
+  res.sendFile(path.join(__dirname, '/views/index4.html'))
 })
 
 /*

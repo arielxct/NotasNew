@@ -8,7 +8,7 @@ body {
 	background-size: 100% 100%;
 	background-attachment: fixed;
 	color: rgb(234, 222, 222);
-	background-color: rgb(13, 13, 14);
+	background-color: black;
 }
 
 .header {
@@ -83,12 +83,14 @@ h2 {
 }
 
 .agregar_tarea button {
-	width: 5%;
+	/* width: 5%; */
 	height: 41px;
 	vertical-align: top;
-	border: 1px solid rgba(10, 10, 10, 0.3);
-	background: rgb(72, 121, 185);
+	/* border: 3px solid rgba(10, 10, 10, 0.3);*/
+	background:rgb(73, 231, 68);
 	transition: all 300ms ease;
+	color:black;
+	
 }
 
 .agregar_tarea button:hover {
@@ -103,6 +105,15 @@ h2 {
 	margin: 20px;
 	border: 1px solid rgb(12, 104, 196);
 }
+/* agrego semaforo */
+.semaforo {
+	width: auto;
+	background-color:black;
+	padding: 20px;
+	margin: 20px;
+	/*border: 1px solid rgb(12, 104, 196);*/
+}
+
 
 .tarea div {
 	display: inline-block;
@@ -135,31 +146,68 @@ h2 {
 	background-color: black;
 	;
 }
+/* modifico de 90% a 70% */
  .categoria_uno {
-	width: 90%;
+	width: 70%;
 	border:1px;
 	background-color: black;
 	
  }
+ /* modifico de 98% a 70% */
  .tarea_uno{
-	width: 98%;
+	width: 70%;
 	border:1px;
 	background-color: black;
 	position: left
 	;
  }
 /* Estilos de boton de la tarea */
-
+/* original
 .boton_tarea {
 	width: 40px;
 	height: 50px;
 	background: lightblue;
 	border-radius: 5px;
-	border: 1px solid black;
+	border: 1px solid rgb(230, 16, 16);
+	color: #3cb13c;
 }
+*/
+.button_tarea {
+	width: 40px;
+	height: 50px;
+	background: lightblue;
+	border-radius: 5px;
+	border: 1px solid rgb(230, 16, 16);
+	color: #3cb13c;
+  }
+  .button_tarea_editar{
+	width: 40px;
+	height: 50px;
+	background: lightblue;
+	border-radius: 5px;
+	border: 1px solid rgb(230, 16, 16);
+	color: #347c92;
+  }
+  .button_tarea_guardar {
+	width: 40px;
+	height: 50px;
+	background: lightblue;
+	border-radius: 5px;
+	border: 1px solid rgb(230, 16, 16);
+	color: #c79730;
+  }
+
 
 .boton_tarea:hover {
 	background: #ff7474;
+	cursor: pointer;
+}
+.boton_tarea_editar:hover {
+	background: #74ff80;
+	cursor: pointer;
+}
+.boton_tarea_guardar:hover {
+	background: #b9df12;
 	cursor: pointer;
 }
 
@@ -203,7 +251,18 @@ input[type=text], select {
 	border: 1px solid #d91a2a;
 	border-radius: 4px;
 	box-sizing: border-box;
-	color: rgb(0, 1, 1);
+	color: black;
+  }
+  .navbar li{
+	background-color:black;
+	
+  }
+  .navbar a{
+	background-color:white;
+	border: #d28f14;
+	border-color: #4343c1;
+	color: #d91a2a;
+	
   }
 /* agrego estilo del Footer*/
 footer{

@@ -59,7 +59,7 @@
 		<div class="agregar_tarea">
 			<h2>Agregar Tarea:</h2>
 			<input type="text" placeholder="Ingrese su tarea" id="texto_tarea"> <!-- <input type="text" placeholder="Ingrese su tarea" id="texto">-->
-			<button id="tarea">>></button>
+			<button id="tarea">Aceptar</button>
 		</div>
 
 		<div class="tareas1">
@@ -78,10 +78,42 @@
 
 <!-- AGREGO NUEVOS BOTONES-->
 <div class="botones">
-	<button id="" class="uno1">Buscar Notas</button>
-	<button id="" class="uno2">Editar Categorias</button>
-	<button id="">Exportar notas</button>
+	<button id="cuatro">Editar  Notas</button>
+	<button id="cinco">Editar Categorias</button>
+	<button id="seis">Agenda</button>
 	<button id="">Hacer Backup</button>
+	<!-- Agrego acceso a Agenda-->
+	<nav class="navbar">
+		<ul>
+			<li><a href="/agenda.html">FUNCIONALIDADs AGENDA</a></li>
+									
+	  
+		</ul>
+	</nav>
+	<!--
+	<ul>
+		<li><a href="./agenda.html">Funcionalidad Agenda</a></li>
+		<li><a href="./preguntas.html">Preguntas</a></li>
+		<li><a href="./consultas.html">Consultas</a></li>
+	   
+	</ul>
+
+	<form name="agenda" method="GET" action="/agenda/agenda.html" target="_blank">
+
+		<b>Funcionalidad Agenda</b><br>
+				
+		
+		<input type="text" name="email" size="20"><br>
+		
+		<input type="checkbox" name="alta" value="ON"> Darme de <b>alta</b> |
+		
+		<input type="checkbox" name="baja" value="ON"> Darme de baja<br>
+		
+		<input type="button" onClick="/agenda/agenda.html" value="">
+		
+		</form>
+-->
+	<!-- fin de acceso a agenda	-->
 
 <!-- agrego el FOOTER 000000000000000000000000000-->
 <div class="header">
@@ -113,10 +145,11 @@
         <h5>Más Información</h5>
         <ul>
           <li><a href="./index4.html">Inicio</a></li>
+		  <li><a href="./agenda.html">Agenda</a></li>
           <li><a href="./preguntas.html">Preguntas</a></li>
           <li><a href="./consultas.html">Consultas</a></li>
          
-		  <li><a href="editar_perfil.html">Perfil</a></li>
+		  
         
 		</ul>
       </div>
@@ -143,7 +176,7 @@
       </div>
     </div>
     </footer>
-
+	<!-- <div class="tarea" style="background-color: blueviolet;" -->
 
 <!-- COMIENZA LA PARTE DE SCRIPT OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->		
 <!-- FUNCION AGREGA CATEGORIA Y TAREA EN JAVASCRIPT   , agregue categoria, creo el espacio para mostrar datos-->
@@ -160,7 +193,9 @@
 										'</div>'+
 									'</div>'+
 									'<div class="select">'+
-										'<button class="boton_tarea">X</button>'+
+										'<button class="boton_tarea">Borrar</button>'+
+										'<button class="boton_tarea_editar">Editar</button>'+
+										
 									'</div>'+
 								'</div>';
 				$(".tareas").prepend(html_tarea);
@@ -190,7 +225,7 @@
 				var fecha_completa = fecha.getDate() + '/' + (fecha.getMonth()+1) + '/' + fecha.getFullYear() + ' ' + fecha.getHours() + ':' + fecha.getMinutes();
 				
 				if (tarea != "") {
-					agregarTarea(fecha_completa,categoria,tarea); // agregeue categoria
+					agregarTarea(fecha_completa,categoria,tarea); // agregue categoria
 					$(".tarea:first").show(500);
 				} else {
 					alert("El texto no tiene que estar vacio.");
@@ -199,6 +234,7 @@
 				$("#texto_categoria").val(""); // pongo en cero los imputs
 				$("#texto_tarea").val("");//$("#texto").val("");
 				setEliminarBtn();
+				setEditarBtn();
 			});
 			// ESTA FUNCION SE ACTIVA SOLA CON EL EVENTO CLICK
 			$('#texto_tarea').keyup(function(e){
@@ -219,10 +255,34 @@
 
 				});
 			}
+			// CREO ESTA FUNCION PARA EDITAR LA NOTA MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+			function setEditarBtn () {
+				$(".boton_tarea_editar").click(function(){
+					$(this).parent(".select").parent(".categoria").hide(500, function(){
+						$(this).text()
+					});
+					$(this).parent(".select").parent(".tarea").hide(500, function(){
+						$(this).text()
+					});
+
+				});
+			}
+
+			// FIN DE FUNCION DE EDITAR NOTA MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+
 			// ESTA FUNCION SE ACTIVA SOLA ACCIONANDO EL BOTON ELIMINAR TAREA
 			$('#tres').click(function(){
 				$('.boton_tarea').trigger('click')
 			});
+			// AGREGO ESTA FUNCION PARA EDITAR LA NOTA, ACTIVANDO EL BOTON GRANDE VERDE
+			$('#cuatro').click(function(){
+				$('.boton_tarea_editar').trigger('click')
+			});
+			// AGREGO ESTA FUNCION PARA ACCEDER A AGENDA, ACTIVANDO EL BOTON GRANDE VERDE
+			$('.seis').click(function(){
+				$('./agenda/agenda.html').trigger('click')
+			});
+
 
 			// ESTA FUNCIONA SE LLAMA SOLA ACTIVANDO EL BOTON GUARDAR NOTAS
 
@@ -235,6 +295,7 @@
 				agregarTarea(tareas_Guardadas[i].fecha, tareas_Guardadas[i].texto_categoria ,tareas_Guardadas[i].texto_tarea);//agregarTarea(tareas_Guardadas[i].fecha, tareas_Guardadas[i].texto);
 				$(".tarea:first").show(500);
 				setEliminarBtn();
+				setEditarBtn();
 			}
 			// ESTA FUNCION EXPORTA A JSON CON BOTON EXPORTA JSON
 			$(".uno2").click(function(){
@@ -249,6 +310,7 @@
 					agregarTarea(tareas_Guardadas[i].fecha, tareas_Guardadas[i].texto_categoria, tareas_Guardadas[i].texto_tarea);//agregarTarea(tareas_Guardadas[i].fecha, tareas_Guardadas[i].texto);
 					$(".tarea:first").show(500);
 					setEliminarBtn();
+					setEditarBtn();
 				}
 			})
 		</script>
